@@ -302,6 +302,11 @@ class CPushMod : public CModule
 				params["title"] = title;
 				params["message"] = short_message;
 
+				if (uri != "")
+				{
+					params["url"] = uri;
+				}
+
 				if (options["target"] != "")
 				{
 					params["device"] = options["target"];
