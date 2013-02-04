@@ -293,7 +293,7 @@ class CPushMod : public CModule
 					return;
 				}
 
-				CString pushover_api_token = "h6RToHDU7gNnB3IMyUb94SuwKtBzOD";
+				CString pushover_api_token = "c3zKDumjovkZBDPbFspZXhkyQpBXnx";
 
 				service_host = "api.pushover.net";
 				service_url = "/1/messages.json";
@@ -302,6 +302,7 @@ class CPushMod : public CModule
 				params["user"] = options["secret"];
 				params["title"] = message_title;
 				params["message"] = message_content;
+				params["sound"] = options["sound"];
 
 				if (message_uri != "")
 				{
